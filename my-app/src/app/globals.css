@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(to bottom , #96b4e7, #ffffff);
+  --foreground: #4d5088;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: linear-gradient(to bottom , #193275, #adc8f3); /* darker gradient */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
